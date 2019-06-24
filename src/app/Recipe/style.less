@@ -1,0 +1,54 @@
+@import "../animations.less";
+
+.recipe{
+    height: 100%;
+    overflow: auto;
+
+    .title{
+        .header{
+            .zoom-font(32px);
+        }
+
+        .sub{
+            .zoom-font(18px);
+        }
+    }
+
+    .actions {
+        .appear();
+    }
+
+
+    .floating {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .like {
+            opacity: 0;
+            width: 5px;
+            height: 5px;
+            background-color: #EE6061;
+            border-radius: 50%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+            .zoom-element(56px, 56px);
+            .appear()
+        }
+    }
+
+    .text{
+        margin-left: 84px;
+        padding-left: 0 !important;
+    }
+}
+
+
+.modal-appear-active .recipe .title,
+.modal-enter-active .recipe .title{
+    margin-top: 25px;
+}
